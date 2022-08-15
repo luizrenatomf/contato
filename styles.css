@@ -1,2 +1,9 @@
-body {
+input {
+    margin-bottom: 15px;
+    display: block;
+}
+
+textarea {
+    margin-bottom: 15px;
+    display: block;
 }

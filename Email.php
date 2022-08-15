@@ -20,7 +20,7 @@ class Email
     private function verificaNome($nome)
     {
         if(strlen($nome) < 3) {
-            echo "O nome informado não é válido!";
+            echo "O nome informado nÃ£o Ã© vÃ¡lido!";
             exit();
         }
     }
@@ -28,7 +28,7 @@ class Email
     private function verificaEmail($email) 
     {
         if(isset($email) && empty($email)) {
-            echo "O e-mail não foi preenchido corretamente.";
+            echo "O e-mail nÃ£o foi preenchido corretamente.";
             exit();
         }
     }
@@ -36,7 +36,7 @@ class Email
     private function verificaMensagem($mensagem)
     {
         if(strlen($mensagem) < 10) {
-            echo "A mensagem não pode ter menos que 10 caracteres.";
+            echo "A mensagem nÃ£o pode ter menos que 10 caracteres.";
             exit();
         }
     }
@@ -54,6 +54,7 @@ class Email
         if(!mail($destino, $assunto, $corpo, $header)) {
             return false;
         }
+        return true;
     }
 
     public function recuperaEmail()
