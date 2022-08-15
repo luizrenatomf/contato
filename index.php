@@ -5,7 +5,7 @@ require_once "Email.php";
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = new Email($_POST['nome'], $_POST['email'], $_POST['mensagem']);
     if(!$email->enviaEmail()) {
-        echo "O e-mail n�o pode ser enviado.";
+        echo "O e-mail não pode ser enviado.";
     } else {
         $email->recuperaEmail();
     }
